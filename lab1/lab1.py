@@ -37,9 +37,9 @@ class App(QMainWindow):
         self.setPalette(p)
 
         self.m = PaintWidget(self)
-        self.m.move(20,20)
+        self.m.move( (width_window - 500)/2,(width_window - 500)/2)
 
-        self.m.resize(580,580)
+        self.m.resize(501,501)
         self.m.update()
         self.show()
 

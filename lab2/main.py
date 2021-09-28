@@ -49,7 +49,7 @@ class App(QMainWindow):
         self.title = 'lab2'
         self.left = 960 - int((width_window+100)/2)
         self.top = 540 - int(width_window/2)
-        self.width = width_window + 100
+        self.width = width_window
         self.height = width_window
 
         self.initUI()
@@ -66,7 +66,7 @@ class App(QMainWindow):
         self.setPalette(p)
 
         self.m = PaintWidget(self)
-        self.m.move(int(width_window/2 - canvas_size_x/2) - 20,int(width_window/2 - canvas_size_x/2) - 20)
+        self.m.move(int(width_window/2 - canvas_size_x/2) - 20 ,int(width_window/2 - canvas_size_x/2)   - 20)
 
         self.m.resize(canvas_size_x*koef*1.1,canvas_size_y*koef*1.1)
         self.m.update()

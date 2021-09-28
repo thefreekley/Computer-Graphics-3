@@ -46,7 +46,7 @@ class App(QMainWindow):
         self.m = PaintWidget(self)
         self.m.move(width_window - 500 - 20,width_window - 500 - 40)
 
-        self.m.resize(500,500)
+        self.m.resize(520,520)
         self.m.x = -130
         self.m.y = 0
         self.m.direction_rotate = 1
@@ -104,7 +104,13 @@ class PaintWidget(QWidget):
 
         scale_value  = multiply([self.x,self.y], scale)
 
-
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 20, "x:" + str(self.x) + " y:" + str(self.y))
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 40, "rotation:")
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 60, str(rotate[0]))
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 80, str(rotate[1]))
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 100, "scale:")
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 120, str(scale[0]))
+        qp.drawText(0, r_right * 2 + r_circum * 2 + 140, str(scale[1]))
 
         qp.setPen(QColor(255, 255, 255))
         qp.setBrush(QColor(255, 255, 255))
@@ -117,6 +123,8 @@ class PaintWidget(QWidget):
         qp.setPen(QColor(0, 0, 0))
         qp.setBrush(QColor("#00000000"))
         qp.drawRect(0, 0, (a_centr * 2 + r_circum) * 2 + r_circum * 2, r_right * 2 + r_circum * 2)
+
+
 
 
 
